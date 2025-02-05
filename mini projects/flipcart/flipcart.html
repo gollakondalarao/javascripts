@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipcart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="flipcart.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+                alt="Logo">
+        </div>
+        <div class="search_container">
+            <form id="search_form" oninput="filterproducts()">
+                <input type="text" placeholder="Search for products, brands and more" id="search_input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+        </div>
+        <!-- log in  -->
+        <div class="loginBtn_container">
+            <a href="#">Login</a>
+        </div>
+
+        <!-- button  -->
+        <div class="nav_link">Become a Seller</div>
+        <div class="more_container">
+            <a href="#">More</a>
+            <i class="fa-solid fa-angle-down icon_more"></i>
+        </div>
+
+        <!-- cart  -->
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- products  -->
+
+    <div class="product-listing">
+        <!-- pruduct1 -->
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/o/q/y/-original-imah8affczqnzp6s.jpeg?q=70"
+                alt="POCO C75 5G">
+            <div class="product-details">
+                <p class="product-title">POCO C75 5G (Silver Stardust, 64 GB)</p>
+                <p class="product-price">₹8,499 <span class="original-price">₹10,999</span></p>
+                <div class="product-buttons">
+                    <button class="addtocart">Add to Cart</button>
+                    <button class="buynow">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- product2  -->
+
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/j/a/b/-original-imah83eztbdcsknu.jpeg?q=70" alt="Motorola g45 5G">
+            <div class="product-details">
+              <p class="product-title">Motorola g45 5G (Brilliant Blue, 128 GB)</p>
+              <p class="product-price">₹11,999 <span class="original-price">₹14,999</span></p>
+              <div class="product-buttons">
+                <button class="addtocart">Add to Cart</button>
+                <button class="buynow">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- product3 -->
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/k/g/j/t3x-5g-v2338-vivo-original-imahyyzaqhgwzfup.jpeg?q=70" alt="Vox V18">
+            <div class="product-details">
+              <p class="product-title">Vox V18</p>
+              <p class="product-price">₹12999 <span class="original-price">₹11499</span></p>
+              <div class="product-buttons">
+                <button class="addtocart">Add to Cart</button>
+                <button class="buynow">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- product4 -->
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/x/c/z/a4-5g-a4-5g-redmi-original-imah6yhdqpgfw36t.jpeg?q=70" alt="Motorola g45 5G">
+            <div class="product-details">
+              <p class="product-title">redmi g45 5G (Brilliant Blue, 128 GB)</p>
+              <p class="product-price">₹11,999 <span class="original-price">₹14,999</span></p>
+              <div class="product-buttons">
+                <button class="addtocart">Add to Cart</button>
+                <button class="buynow">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- product5  -->
+          <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRUxplwZcg8gKKV8UXs2a8S8wYz6PBm7x83Lc6yOUQhzAXFfrgjbIn2tsUvFC7G1K8d7LbwMIa6mEotD2Gb9gRen4IJ7QL1DfEdrY-9XPwx9UPZU87P0YnPc5VsPeV577LjGzHE7A&usqp=CAc" alt="Motorola g45 5G">
+            <div class="product-details">
+              <p class="product-title">samsung g45 5G (Brilliant Blue, 128 GB)</p>
+              <p class="product-price">₹13,999 <span class="original-price">₹14,999</span></p>
+              <div class="product-buttons">
+                <button class="addtocart">Add to Cart</button>
+                <button class="buynow">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- product 6 -->
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/w/c/3/-original-imah3chxfqnezjjb.jpeg?q=70" alt="Motorola g45 5G">
+            <div class="product-details">
+              <p class="product-title">realme g45 5G (Brilliant Blue, 128 GB)</p>
+              <p class="product-price">₹16,999 <span class="original-price">₹14,999</span></p>
+              <div class="product-buttons">
+                <button class="addtocart">Add to Cart</button>
+                <button class="buynow">Buy Now</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="flipcart.js"></script>
+</body>
+
+</html>

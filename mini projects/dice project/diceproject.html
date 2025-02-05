@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>miniproject1</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .dice-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+
+    }
+    .dice {
+      width: 150px;
+      height: 150px;
+      font-size: 60px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: orange;
+      border-radius: 10px;
+      transform: rotate(0deg);
+      transition: transform 0.5s;
+    }
+    button {
+      padding: 10px;
+      font-size: 20px;
+      background-color:blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Dice Game with Music</h1>
+  <p>Click the button to roll the dice and play a random song!</p>
+  <div class="dice-container">
+    <div class="dice" id="dice1">1</div>
+    <div class="dice" id="dice2">1</div>
+  </div>
+  <button id="rollButton">Roll the Dice</button>
+
+  <audio id="audioPlayer"></audio>
+
+  <script src="dice.js"></script>
+</body>
+</html>

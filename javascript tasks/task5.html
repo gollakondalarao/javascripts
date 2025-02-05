@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringify Example</title>
+</head>
+<body>
+    <script>
+        let frnds = ['konda', 'ajay', 'lakshman'];
+        localStorage.setItem('frnds', JSON.stringify(frnds)); 
+
+        let data = JSON.parse(localStorage.getItem('frnds')); 
+        console.log(data);
+        document.write(JSON.stringify({ name: 'konda' }));
+        console.log({ name: 'konda' });
+
+        let fruits;
+        if (localStorage.getItem('fruits')) {
+            fruits = JSON.parse(localStorage.getItem('fruits')); 
+        } else {
+            fruits = []; 
+        }
+        console.log(fruits); 
+
+        fruits.push('apple');
+        localStorage.setItem('fruits', JSON.stringify(fruits)); 
+        console.log(fruits); 
+        document.write(JSON.stringify({name:'friuts'}))
+        console.log({name:'fruits'});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="todos.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h1>My Todo's</h1>
+    <div class="todo-display">
+      <div id="no-task" class="no-task">
+        <img src="https://t3.ftcdn.net/jpg/05/13/59/72/360_F_513597277_YYqrogAmgRR9ohwTUnOM784zS9eYUcSk.jpg" alt="Placeholder Image">
+        <p>You have no task today</p>
+        <span>Start adding your new tasks!</span>
+      </div>
+      <ul id="todo-list" class="todo-list"></ul>
+    </div>
+    <div class="todo-input">
+      <input type="text" id="task-name" placeholder="Task name here">
+      <input type="text" id="task-desc" placeholder="Description">
+      <input type="date" id="due-date">
+      <button id="add-task">Add Task</button>
+    </div>
+  </div>
+  <script src="todos.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment1</title>
+</head>
+<body>
+    <script>
+        // Task 1: Electricity Bill Calculator
+    function calculateElectricityBill(units) {
+    let bill = 0;
+
+    if (units > 200) {
+        bill += (units - 200) * 5;
+        units = 200;
+    }
+    if (units > 150) {
+        bill += (units - 150) * 4;
+        units = 150;
+    }
+    if (units > 100) {
+        bill += (units - 100) * 3;
+        units = 100;
+    }
+    if (units > 50) {
+        bill += (units - 50) * 2;
+        units = 50;
+    }
+    bill += units * 1;
+
+    if (units > 200) {
+        bill *= 0.9; 
+    }
+
+    return bill;
+}
+
+console.log("Electricity Bill for 210 units:", calculateElectricityBill(210));
+
+// Task 2: FizzBuzz
+function fizzBuzz() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+fizzBuzz();
+
+// Task 3: Employee Salary Calculator
+function calculateWeeklySalary(hoursWorked, hourlyRate) {
+    let regularHours = Math.min(hoursWorked, 40);
+    let overtimeHours = Math.max(0, hoursWorked - 40);
+    let overtimePay = overtimeHours * hourlyRate * 1.5;
+    return (regularHours * hourlyRate) + overtimePay;
+}
+
+function applyBonus(salary, bonus = 0) {
+    return salary + bonus;
+}
+
+function displaySalary(employeeName, totalSalary) {
+    console.log(`Employee: ${employeeName}, Total Salary: ₹${totalSalary.toFixed(2)}`);
+}
+
+// Example Usage
+let employeeName = "John Doe";
+let hoursWorked = 45;
+let hourlyRate = 100;
+let bonus = 500;
+
+let weeklySalary = calculateWeeklySalary(hoursWorked, hourlyRate);
+let totalSalary = applyBonus(weeklySalary, bonus);
+displaySalary(employeeName, totalSalary);
+
+    </script>
+</body>
+</html>
